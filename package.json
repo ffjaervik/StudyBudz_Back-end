@@ -1,0 +1,23 @@
+{
+  "name": "w9_backend-project-room-5-front-end",
+  "version": "1.0.0",
+  "description": "For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchoolOfCode/w9_backend-project-room-5-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SchoolOfCode/w9_backend-project-room-5-front-end/issues"
+  },
+  "homepage": "https://github.com/SchoolOfCode/w9_backend-project-room-5-front-end#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
