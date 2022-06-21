@@ -1,4 +1,4 @@
-import  pool  from "../db/index.js";
+import  pool  from '../db/index'
 
 export const selectAllLessons = async function () {
   const results = await pool.query("SELECT * FROM lessons");
