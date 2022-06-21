@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node ./app.js",
     "db": "node -r dotenv/config db/index.js",
     "dbcreate": "node -r dotenv/config db/scripts/createLessonsTable.js", 
     "lessonsModel": "node -r dotenv/config models/lessons.js",
