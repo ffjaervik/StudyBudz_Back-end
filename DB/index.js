@@ -14,15 +14,15 @@ export const pool = new pg.Pool({
   },
 });
 
-//Make a function that takes in an SQL string and runs pool.query using that string
-//Export query function
-function poolQuery(string) {
-  return pool.query(string);
-}
-//Testing that the pool query works and what it gives back.
-async function log() {
-  let now = await poolQuery(`SELECT NOW()`);
-  console.log(now);
-}
+// //Make a function that takes in an SQL string and runs pool.query using that string
+// //Export query function
+// function poolQuery(string) {
+//   return pool.query(string);
+// }
+// //Testing that the pool query works and what it gives back.
+// async function log() {
+//   let now = await poolQuery(`SELECT NOW()`);
+//   console.log(now);
+// }
 
 //log()
