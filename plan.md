@@ -1,8 +1,7 @@
 npm init
 create .gitignore
-npm i express
+npm i express dotenv
 add node_modules to .gitignore
-npm i dotenv
 create .env
 lessons = the event/zoom live calls / lessons , we just refer to it as events
 
