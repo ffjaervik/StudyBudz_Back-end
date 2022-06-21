@@ -1,6 +1,15 @@
 import express from "express";
-import { selectAllLessons, selectLessonsById } from "../models/lessons.js";
+import { selectAllLessons, selectLessonsById, postLessons, selectLessonsByTopic } from "../models/lessons.js";
 const router = express.Router();
+
+// http://localhost:3000/lessons/q?topic=html
+router.get("/q", async (req, res) => { //How to have two .get/ without conflict?
+  const topic = req.query.topic
+  console.log('this is topic ', topic)
+  const results = await selectLessonsByTopic(topic);
+  res.json({ success: true, payload: results });
+});
+
 
 router.get("/", async (req, res) => {
   const results = await selectAllLessons();
@@ -12,4 +21,14 @@ router.get("/:id", async (req, res) => {
   res.json({ success: true, payload: results });
 });
 
+router.post("/", async (req, res) => {
+  const data = req.body;
+  const results = await postLessons(data.name, data.topic, data.description, data.zoom, data.paypalEmail, data.dateTime, data.duration, data.starRating);
+  res.json({ success: true, payload: results });
+});
+
+ 
+ 
+
+ 
 export default router;
