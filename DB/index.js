@@ -3,7 +3,7 @@ import pg from "pg";
 
 //Setup a new pool which will be the connection to the database
 //Use our Heroku credentials in the pool or client
-export const pool = new pg.Pool({
+ const pool = new pg.Pool({
   user: process.env.PGUSER,
   host: process.env.PGHOST,
   database: process.env.PGDATABASE,
@@ -26,3 +26,5 @@ export const pool = new pg.Pool({
 // }
 
 //log()
+
+export default pool

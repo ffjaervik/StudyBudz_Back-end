@@ -16,8 +16,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.get("/",(req,res)=>{
+res.json({message:"This is me"})
+})
 
 app.use('/lessons', router);
+
 
 app.use(function (req, res, next) {
   res.status(404).json({message: "We couldn't find what you were looking for 😞"})
