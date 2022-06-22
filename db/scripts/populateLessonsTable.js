@@ -4,9 +4,9 @@ import {pool} from "../index.js";
 
 // Change data and run to add more to database:
 
- let sqlString = `INSERT INTO lessons (name, topic, description, zoom, paypalemail, datetime, duration, starrating) VALUES ('Calum Islam', 'javascript tutorial for everyone', '60 minutes to launch your personal JS project!', 'http://zoom.com', 'calumislam@example.com', '2022-07-25T11:30', 30, 3)`
+//  let sqlString = `INSERT INTO lessons (name, topic, description, zoom, paypalemail, datetime, duration, starrating) VALUES ('Alex Martin', 'javascript tutorial for everyone', '60 minutes to launch your personal JS project!', 'http://zoom.com', 'calumislam@example.com', '2022-07-25T11:30', 30, 3)`
  
-
+// let sqlString = `DROP TABLE lessons`
 
 
     function poolQuery(string) {
