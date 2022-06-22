@@ -29,7 +29,6 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   const data = req.body;
   console.log(data);
-  const duration = 30;
   const results = await postLessons(
     data.name,
     data.topic,
@@ -37,7 +36,7 @@ router.post('/', async (req, res) => {
     data.zoom,
     data.paypalemail,
     data.datetime,
-    duration,
+    data.duration,
     data.starrating
   );
   res.json({ success: true, payload: results });
