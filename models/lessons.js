@@ -18,7 +18,7 @@ const sqlString = `CREATE TABLE IF NOT EXISTS lessons (lesson_id INT PRIMARY KEY
 export const postLessons = async function postLessons(name, topic, description, zoom, paypalEmail, dateTime, duration, starRating) {
        const results = await pool.query(
            `INSERT INTO lessons (name, topic, description, zoom, paypalemail, datetime, duration, starrating) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`, 
-           [name, topic, description, zoom, paypalEmail, dateTime, duration, starRating]
+           [name, topic, description, zoom, paypalemail, datetime, duration, starrating]
        );
 }
 

@@ -12,6 +12,7 @@ router.get("/q", async (req, res) => { //How to have two .get/ without conflict?
 
 
 router.get("/", async (req, res) => {
+
   const results = await selectAllLessons();
   res.json({ success: true, payload: results });
 });
@@ -23,7 +24,7 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const data = req.body;
-  const results = await postLessons(data.name, data.topic, data.description, data.zoom, data.paypalEmail, data.dateTime, data.duration, data.starRating);
+  const results = await postLessons(data.name, data.topic, data.description, data.zoom, data.paypalemail, data.datetime, data.duration, data.starrating);
   res.json({ success: true, payload: results });
 });
 
