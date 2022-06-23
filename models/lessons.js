@@ -29,7 +29,19 @@ export const selectLessonsByTopic = async function (topic) {
   return results.rows;
 };
 
+export const deleteLessonsByTopic = async function (topic) {
+  const results = await pool.query(
+    `DELETE FROM lessons WHERE topic LIKE '%${topic}%';`
+  );
+  return results.rows;
+};
 
+export const deleteLessonsById = async function (id) {
+  const results = await pool.query(
+    `DELETE FROM lessons WHERE lesson_id = '${id}';`
+  );
+  return results.rows;
+};
 // async function populateDogsTable() {
 //   for (let i = 0; i < dogsData.length; i++) {
 //        const res = await query (
