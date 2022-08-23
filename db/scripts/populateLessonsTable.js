@@ -1,4 +1,17 @@
 import {pool} from "../index.js";
+import lessons from "../../libs/lessons.js";
+
+async function populateLessonsTable() {
+    for (let i = 0; i < lessons.length; i++) {
+        const lesson = lessons[i];
+        const sqlString = `INSERT INTO lessons (name, topic, description, zoom, paypalEmail, dateTime, duration, starRating) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);`
+        const values = [lesson.name, lesson.topic, lesson.description, lesson.zoom, lesson.paypalemail, lesson.datetime, lesson.duration, lesson.starrating];
+        const res = await pool.query(sqlString, values);
+        console.log(res.rows[i]);
+    }}
+
+    populateLessonsTable();
+    
 
 // const sqlString = `CREATE TABLE IF NOT EXISTS lessons (lesson_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY, name TEXT, topic TEXT, description TEXT, zoom TEXT, paypalemail TEXT, datetime TEXT, duration INT, starrating INT, badge1 TEXT, badge2 TEXT, badge3 TEXT, level TEXT, extra TEXT);`; // YYYY-MM-DD HH:MM:SS
 
@@ -9,10 +22,10 @@ import {pool} from "../index.js";
 // let sqlString = `DROP TABLE lessons`
 
 
-    function poolQuery(string) {
-        return pool.query(string)
-    }
-    poolQuery(sqlString)
+    // function poolQuery(string) {
+    //     return pool.query(string)
+    // }
+    // poolQuery(sqlString)
 
 /** 
     {
