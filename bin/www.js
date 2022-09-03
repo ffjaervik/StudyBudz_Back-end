@@ -9,7 +9,7 @@ import http from 'http';
 
 import app from '../app.js';
 
-const debug = debugLib('w9-backend-project-room-5-front-end:server');
+const debug = debugLib('StudyBudz_Front-end:server');
 
 /**
  * Get port from environment and store in Express.
